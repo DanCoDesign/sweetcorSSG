@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply dark:bg-[#052825] bg-white
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+        @apply text-[#232536];
+        @apply dark:text-white;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-bg: #0D000000;
+    --main-color: #232536;
+    --button-bg: #FFD050;
+    --button-hover: #EDC14A;
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+.link {
+
+    font-size: 0.875rem;
+    font-weight: normal;
+    color: #8d5ee4;
+    align-items: center;
+    line-height: 1.75;
+    letter-spacing: 0em;
+}
