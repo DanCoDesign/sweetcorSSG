@@ -5,9 +5,9 @@ const AboutSection = () => {
         <section className="w-full">
 
             <div className="grid grid-cols-4 gap-0 h-5 w-full grid-flow-row">
-                <div class="bg-white col-span-1 dark:bg-[#2E3040]"></div>
-                <div class="bg-button-bg col-span-2"></div>
-                <div class="bg-[#592EA9] col-span-1"></div>
+                <div className="bg-white col-span-1 dark:bg-[#2E3040]"></div>
+                <div className="bg-button-bg col-span-2"></div>
+                <div className="bg-[#592EA9] col-span-1"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2  gap-20 px-20 py-24 ">
                 <div className="flex flex-col space-y-4">
