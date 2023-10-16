@@ -9,6 +9,7 @@ export default function Home() {
 
   return (
     <>
+
       <Hero />
       <Container className="flex gap-x-8 flex-col lg:flex-row md:px-12 lg:px-20 ">
         <Featured />
