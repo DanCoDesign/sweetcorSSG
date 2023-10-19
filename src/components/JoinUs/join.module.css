@@ -1,0 +1,18 @@
+.h1 {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    /* 133.333% */
+    letter-spacing: -2px;
+}
+
+.p {
+    color: #6D6E76;
+    margin: 24px 0 24px 0;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 175% */
+}

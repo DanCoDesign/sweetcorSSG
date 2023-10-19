@@ -14,7 +14,7 @@ const Navbar = () => {
     },
     {
       name: 'Blog',
-      route: '/#features'
+      route: '/blog'
     },
     {
       name: 'About Us',

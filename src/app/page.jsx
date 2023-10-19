@@ -7,6 +7,7 @@ import AboutSection from "@/components/aboutUs/AboutUs";
 import CategoryList from "@/components/categoryList/CategoryList";
 import Why from "@/components/whysegment/why";
 import Testimonial from "@/components/testimonials/Testimonial";
+import Join from "@/components/JoinUs/joinUs";
 
 export default function Home() {
 
@@ -25,6 +26,7 @@ export default function Home() {
         <CategoryList />
         <Why />
         <Testimonial />
+        <Join />
       </Container>
 
     </>
