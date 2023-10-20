@@ -1,0 +1,47 @@
+.previewimageContainer {
+    width: 405px;
+    height: 318px;
+    position: relative;
+}
+
+.contentContainer {
+   
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+   
+}
+
+.previewimage {
+    object-fit: cover;
+}
+
+
+.textContainer:hover {
+    background: var(--Light-yellow, #FBF6EA);
+}
+
+.category {
+    display: flex;
+    align-items: center;
+   color: gray;
+    font-size: 16px;
+    font-style: normal;
+
+
+
+}
+
+.postTitle>h3 {
+
+    color: #232536;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    /* 142.857% */
+    letter-spacing: -1px;
+
+}

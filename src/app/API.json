@@ -3,15 +3,17 @@
         {
             "id": 1,
             "title": "Getting Started with React",
-            "img": "https://picsum.photos/500/320",
+            "slug": "javascript",
+            "img": "https://picsum.photos/700/520",
             "createdAt": "2023-10-15",
             "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Flexbox is a powerful layout tool for CSS. In this tutorial, we'll explore its features and",
-            "catSlug": "React"
+            "catSlug": "javascript"
         },
         {
             "id": 2,
             "title": "Mastering CSS Flexbox",
-            "img": "https://picsum.photos/500/320",
+            "slug": "javascript2",
+            "img": "https://picsum.photos/700/520",
             "createdAt": "2023-10-10",
             "desc": "Flexbox is a powerful layout tool for CSS. In this tutorial, we'll explore its features and use cases..Flexbox is a powerful layout tool for CSS. In this tutorial, we'll explore its features and.",
             "catSlug": "CSS"
@@ -19,7 +21,8 @@
         {
             "id": 3,
             "title": "JavaScript Fundamentals",
-            "img": "https://picsum.photos/500/320",
+            "slug": "javascript3",
+            "img": "https://picsum.photos/700/520",
             "createdAt": "2023-10-05",
             "desc": "JavaScript is the backbone of web development. Learn the basics of JavaScript in this beginner-friendly guide...",
             "catSlug": "JavaScript"
@@ -27,7 +30,8 @@
         {
             "id": 4,
             "title": "JavaScriptus Fundamentalis",
-            "img": "https://picsum.photos/500/320",
+            "slug": "javascript",
+            "img": "https://picsum.photos/700/520",
             "createdAt": "2023-10-05",
             "desc": "JavaScript is the backbone of web development. Learn the basics of JavaScript in this beginner-friendly guide...",
             "catSlug": "JavaScript"
@@ -35,7 +39,8 @@
         {
             "id": 5,
             "title": "Mastering CSS Flexbox",
-            "img": "https://picsum.photos/500/320",
+            "slug": "javascript5",
+            "img": "https://picsum.photos/700/520",
             "createdAt": "2023-10-10",
             "desc": "Flexbox is a powerful layout tool for CSS. In this tutorial, we'll explore its features and use cases.",
             "catSlug": "CSS"
@@ -43,7 +48,8 @@
         {
             "id": 6,
             "title": "JavaScript Fundamentals",
-            "img": "https://picsum.photos/500/320",
+            "slug": "javascript",
+            "img": "https://picsum.photos/700/520",
             "createdAt": "2023-10-05",
             "desc": "JavaScript is the backbone of web development. Learn the basics of JavaScript in this beginner-friendly guide.",
             "catSlug": "JavaScript"
@@ -51,7 +57,8 @@
         {
             "id": 7,
             "title": "Creating Beautiful Web Designs",
-            "img": "https://picsum.photos/500/320",
+            "slug": "javascript7",
+            "img": "https://picsum.photos/700/520",
             "createdAt": "2023-09-28",
             "desc": "Explore the art of creating visually stunning web designs using the latest design techniques.",
             "catSlug": "Web Design"
@@ -59,7 +66,8 @@
         {
             "id": 8,
             "title": "Optimizing Website Performance",
-            "img": "https://picsum.photos/500/320",
+            "slug": "javascript8",
+            "img": "https://picsum.photos/700/520",
             "createdAt": "2023-09-20",
             "desc": "Boost your website's performance with optimization tips and best practices.",
             "catSlug": "Performance"
@@ -67,7 +75,8 @@
         {
             "id": 9,
             "title": "Introduction to Tailwind CSS",
-            "img": "https://picsum.photos/500/320",
+            "slug": "javascript9",
+            "img": "https://picsum.photos/700/520",
             "createdAt": "2023-09-12",
             "desc": "Learn the basics of Tailwind CSS and how it can streamline your web development process.",
             "catSlug": "Tailwind CSS"

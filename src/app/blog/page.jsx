@@ -53,7 +53,7 @@ const BlogPage = ({ searchParams }) => {
 
     const limitposts = blogData.posts.slice(0, POST_PER_PAGE);
     return (
-        <Container className="flex gap-x-8 flex-col mb-[96px]">
+        <Container className="flex gap-x-8 flex-col">
 
             <BlogFeatured />
             <div className="py-16">

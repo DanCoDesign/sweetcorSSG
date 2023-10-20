@@ -36,10 +36,22 @@ html {
     }
 }
 
+h2 {
+    color: #000;
+
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    /* 133.333% */
+    letter-spacing: -2px;
+}
+
+
 .link {
 
-    font-size: 0.875rem;
-    font-weight: normal;
+    font-size: 1rem;
+    font-weight: 500;
     color: #8d5ee4;
     align-items: center;
     line-height: 1.75;
