@@ -91,7 +91,7 @@ export default function LoginForm() {
                 )}
             </div>
             <p className="text-sm text-center text-gray-400">
-                Don't have an account yet?{" "}
+                Don&apos;t have an account yet?{" "}
                 <a
                     href={"/register"}
                     className="text-indigo-400 focus:outline-none focus:underline focus:text-indigo-500 dark:focus:border-indigo-800">
