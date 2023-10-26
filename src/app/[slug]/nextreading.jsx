@@ -7,11 +7,7 @@ import blogData from '../API.json'; // Importing dummy JSON data
 const NextReading = ({ nextslug }) => {
 
 
-    const javascriptPosts = blogData.posts.filter(items => items.slug === nextslug).map(item => (
-        <div key={item.slug}>
-            {/* Your post content rendering here */}
-        </div>
-    ));;
+    const javascriptPosts = blogData.posts.filter(items => items.slug === nextslug);
 
     return (
         <section className="flex ">
@@ -19,7 +15,7 @@ const NextReading = ({ nextslug }) => {
 
             <div className="flex flex-col lg:flex-row gap-x-8 mx-auto">
                 {javascriptPosts.map((items) => (
-                    <div className="flex flex-col max-w-[405px]">
+                    <div className="flex flex-col max-w-[405px]" key={items.slug}>
                         <div className={styles.previewimageContainer}>
                             <Image src={items.img} alt="" fill className={styles.previewimage} />
                         </div>
