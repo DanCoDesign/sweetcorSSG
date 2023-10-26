@@ -7,7 +7,11 @@ import blogData from '../API.json'; // Importing dummy JSON data
 const NextReading = ({ nextslug }) => {
 
 
-    const javascriptPosts = blogData.posts.filter(items => items.slug === nextslug);
+    const javascriptPosts = blogData.posts.filter(items => items.slug === nextslug).map(item => (
+        <div key={item.slug}>
+            {/* Your post content rendering here */}
+        </div>
+    ));;
 
     return (
         <section className="flex ">
