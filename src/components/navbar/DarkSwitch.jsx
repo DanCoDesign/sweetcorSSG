@@ -12,7 +12,7 @@ export const ThemeChanger = () => {
   if (!mounted) return null;
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center justify-center pt-4 lg:py-0">
       {theme === "dark" ? (
         <button
           onClick={() => setTheme("light")}

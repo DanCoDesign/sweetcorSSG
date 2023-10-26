@@ -18,24 +18,24 @@ const AuthButton = () => {
     }
 
     return (
-        <>
+        <div className='flex items-center'>
             <button
                 onClick={handleAuthentication}
                 rel="noopener"
-                className="px-12 py-3 mx-2 text-regular font-bold text-main-color bg-white w-auto hover:text-button-bg hover:bg-gray-500">
+                className="px-12 py-3 mx-2 text-regular font-bold text-main-color bg-white w-auto hover:text-button-bg hover:bg-gray-500 rounded-md">
                 {session ? "Log Out" : "Log In"}
             </button>
             {
                 session &&
                 <button
-                    onClick={() => push('/write')} 
-                    className="px-12 py-3 font-bold text-center text-main-color bg-button-bg w-auto">
+                    onClick={() => push('/write')}
+                    className="px-12 py-3 font-bold text-center text-main-color bg-button-bg w-auto rounded-md">
                     <div className="flex justify-between items-center text-base">
                         Write Article
                     </div>
                 </button>
             }
-        </>
+        </div>
     );
 }
 

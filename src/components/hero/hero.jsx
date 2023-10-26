@@ -22,7 +22,7 @@ const Hero = () => {
             The featured post section description is a succinct follow-up to a compelling headline. Keep it brief, straightforward, and pointedly descriptive.
           </p>
 
-          <div className="flex flex-col items-center py-3 space-y-3 sm:space-x-4 lg:space-y-0 md:flex-row justify-center lg:justify-start">
+          <div className="flex flex-col items-center py-3 space-y-3 sm:space-x-4 lg:space-y-0 md:flex-row justify-center lg:justify-start ">
             <BookAMeeting title="Read More >" />
           </div>
 

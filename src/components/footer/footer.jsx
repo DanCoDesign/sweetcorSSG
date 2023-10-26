@@ -72,7 +72,7 @@ export default function Footer() {
               <Link
                 href="/contact"
                 rel="noopener"
-                className="my-4 lg:my-0 px-12 py-4 font-bold j text-main-color bg-button-bg w-auto max-w-[180px]">
+                className="my-4 lg:my-0 px-12 py-4 font-bold j text-main-color bg-button-bg w-auto max-w-[180px] rounded-md">
                 <div className="flex justify-between items-center text-base">
                   Subscribe
 

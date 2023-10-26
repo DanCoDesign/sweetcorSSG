@@ -62,37 +62,35 @@ export default function RegisterForm() {
     };
 
     return (
-        <div className="grid place-items-center h-screen">
-            <div className="shadow-lg p-5 rounded-lg border-t-4 border-green-400">
-                <h1 className="text-xl font-bold my-4">Register</h1>
 
-                <form onSubmit={handleSubmit} className="flex flex-col gap-3">
 
-                    <input
-                        onChange={(e) => setEmail(e.target.value)}
-                        type="text"
-                        placeholder="Email"
-                    />
-                    <input
-                        onChange={(e) => setPassword(e.target.value)}
-                        type="password"
-                        placeholder="Password"
-                    />
-                    <button className="bg-green-600 text-white font-bold cursor-pointer px-6 py-2">
-                        Register
-                    </button>
 
-                    {error && (
-                        <div className="bg-red-500 text-white w-fit text-sm py-1 px-3 rounded-md mt-2">
-                            {error}
-                        </div>
-                    )}
-
-                    <Link className="text-sm mt-3 text-right" href={"/"}>
-                        Already have an account? <span className="underline">Login</span>
-                    </Link>
-                </form>
+        <form onSubmit={handleSubmit}>
+            <div class="mb-6">
+                <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
+                <input onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" placeholder="you@company.com" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
             </div>
-        </div>
+            <div class="mb-6">
+                <div class="flex justify-between mb-2">
+                    <label for="password" class="text-sm text-gray-600 dark:text-gray-400">Password</label>
+                    <a href="#!" class="text-sm text-gray-400 focus:outline-none focus:text-indigo-500 hover:text-indigo-500 dark:hover:text-indigo-300">Forgot password?</a>
+                </div>
+                <input onChange={(e) => setPassword(e.target.value)} type="password" name="password" id="password" placeholder="Your Password" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+            </div>
+            <div class="mb-6">
+                <button type="button" class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">Register</button>
+            </div>
+
+            {error && (
+                <div className="bg-red-500 text-white w-fit text-sm py-1 px-3 rounded-md mt-2">
+                    {error}
+                </div>
+            )}
+
+            <Link className="text-sm text-center text-gray-400" href={"/login"}>
+                Already have an account? <span className="underline">Login</span>
+            </Link>
+        </form>
+
     );
 }
