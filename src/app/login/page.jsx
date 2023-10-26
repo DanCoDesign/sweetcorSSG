@@ -1,31 +1,35 @@
-"use client"
+
 import styles from "./loginPage.module.css"
-import { signIn, useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import LoginForm from "@/components/login/LoginForm";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
+import { authOptions } from "../api/auth/[...nextauth]/route";
 
-const LoginPage = () => {
-    const { status } = useSession();
+export default async function LoginPage() {
 
-    const router = useRouter();
+    const session = await getServerSession(authOptions);
 
-    if (status === "loading") {
-        return <div className={styles.loading}>Loading...</div>;
-    }
+    if (session) redirect("/write");
 
-    if (status === "authenticated") {
-        router.push("/")
-    }
     return (
         <div className={styles.container}>
-            <div className={styles.wrapper}>
-                <div className={styles.socialButton} onClick={() => signIn("google")}>
-                    Sign in with Google
+            <div className="flex items-center min-h-fit bg-white dark:bg-gray-900">
+
+                <div className="max-w-lg mx-auto my-10">
+                    <div className="text-center">
+                        <h1 className="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">
+                            Sign in
+                        </h1>
+
+                        <p className="text-gray-500 dark:text-gray-400 pb-8">
+                            Sign in to access your account
+                        </p>
+                    </div>
+                    <LoginForm />
                 </div>
-                <div className={styles.socialButton}>Sign in with Github</div>
-                <div className={styles.socialButton}>Sign in with username</div>
+
             </div>
         </div>
+
     )
 }
-
-export default LoginPage;

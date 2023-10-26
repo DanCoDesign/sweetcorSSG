@@ -3,10 +3,10 @@ import { useState } from "react";
 import styles from "./writePage.module.css"
 import Container from "@/components/Container";
 import Image from "next/image";
-import ReactQuill from "react-quill";
+import dynamic from "next/dynamic";
+const ReactQuill = dynamic(import('react-quill'), { ssr: false })
 import "react-quill/dist/quill.bubble.css";
-import { useRouter } from "next/navigation";
-import { useSession } from "next-auth/react";
+import UserInfo from "@/components/login/UserInfo";
 
 
 const WritePage = () => {
@@ -16,6 +16,7 @@ const WritePage = () => {
 
     return (
         <Container className="flex flex-col relative">
+            <UserInfo />
             <input type="text" placeholder="Title" />
             <div className={styles.editor}>
                 <div className={styles.editor}>
@@ -48,7 +49,7 @@ const WritePage = () => {
                         theme="bubble"
                         value={value}
                         onChange={setValue}
-                        placeholder="Tell your story..."
+                        placeholder="Write anything..."
                     />
                 </div>
             </div>
