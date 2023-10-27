@@ -46,10 +46,10 @@ export default function Footer() {
           </div>
           {/* menu  */}
           <div className="w-full lg:w-auto flex flex-grow justify-center lg:justify-end items-center mt-6 lg:mt-0">
-            <ul className="items-center justify-center lg:justify-end flex-1 pt-6 lg:pt-0 lg:flex">
+            <ul className="items-center justify-center lg:justify-end pt-6 lg:pt-0 lg:flex">
               {navigation.map((menu, index) => (
-                <li key={index}>
-                  <Link href={menu.route} className="inline-block pl-8 py-2 text-base font-normal no-underline hover:text-button-bg focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
+                <li key={index } className="text-center">
+                  <Link href={menu.route} className="inline-block lg:pl-8 py-2 text-base font-normal no-underline hover:text-button-bg focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
                     {menu.name}
                   </Link>
                 </li>

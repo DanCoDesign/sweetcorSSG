@@ -6,7 +6,7 @@ const Why = () => {
     return (
         <section className="w-full my-8">
             <div className={styles.bg}> </div>
-            <div className={styles.maincontent}>
+            <div className={`${styles.maincontent} dark:bg-[#2E3040]`}>
                 <span className={styles.span}>Why we started</span>
                 <h1 className={styles.h1}>It started out as a simple idea and evolved into our passion</h1>
                 <p className={styles.p}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>

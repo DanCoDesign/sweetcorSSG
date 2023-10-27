@@ -7,7 +7,7 @@ const CategoryList = () => {
     return (
         <section className={styles.main}>
             <h1 className={styles.header}>Choose A Category</h1>
-            <div className="grid grid-cols-2 gap-8 w-full lg:grid-cols-4 my-12">
+            <div className="grid grid-cols-2 gap-8 w-full lg:grid-cols-4 my-12 px-3">
                 <Link href="#">
                     <Category name="Business" text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit." icon={<Business />} />
                 </Link>

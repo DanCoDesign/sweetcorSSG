@@ -9,7 +9,7 @@ const AboutSection = () => {
                 <div className="bg-button-bg col-span-2"></div>
                 <div className="bg-[#592EA9] col-span-1"></div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2  gap-20 px-20 py-24 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20 px-10 py-12 lg:px-20 lg:py-24 ">
                 <div className="flex flex-col space-y-4">
                     <span className="uppercase mb-6">About Us</span>
                     <h1 className="font-bold sm:text-[28px] lg:text-[32px] xl:text-[36px] tracking-tighter leading-tight">
