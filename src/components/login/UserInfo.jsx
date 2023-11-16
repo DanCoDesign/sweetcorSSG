@@ -3,7 +3,7 @@
 import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
 
-export default function UserInfo() {
+export default function UserInfo({prop}) {
     const { data: session } = useSession();
 
     return (
@@ -11,7 +11,7 @@ export default function UserInfo() {
             <div className=" p-8 bg-zince-300/10 flex flex-row items-center ">
 
                 <div className="p-3">
-                    You are logged in with email <span className="font-bold">{session?.user?.email}</span>
+                    You are logged in with email <span className="font-bold">{prop?.email}</span>
                 </div>
                 <button
                     onClick={() => signOut()}

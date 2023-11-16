@@ -20,7 +20,7 @@ export default async function Register() {
                         </h1>
 
                         <p className="text-gray-500 dark:text-gray-400 pb-8">
-                            Register through Google or with Username
+                            Register with email please
                         </p>
                     </div>
                     <RegisterForm />

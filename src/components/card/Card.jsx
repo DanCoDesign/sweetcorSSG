@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Card = ({ key, item, withImage }) => {
     return (
-        <div className={["dark:hover:bg-[#2E3040]", styles.textContainer].join(" ")} key={key}>
+        <div className={`${styles.textContainer} dark:hover:bg-[#2E3040]`} key={key}>
 
             {withImage && (
                 <div className={styles.imageContainer}>
