@@ -5,13 +5,10 @@ import BlogFeatured from "./blogFeatured";
 import CategoryList from "@/components/categoryList/CategoryList";
 import Container from "@/components/Container";
 import Join from "@/components/JoinUs/joinUs";
-import Pagination from "@/components/pagination/Pagination";
-
 import Card from "../../components/card/Card";
-import blogData from '../API.json';
 
 export default function Posts() {
-
+    const [currentPage, setCurrentPage] = useState(1);
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
@@ -31,73 +28,48 @@ export default function Posts() {
         fetchData();
     }, []);
 
+    let POST_PER_PAGE = 2;
+
+    const sortedPosts = posts?.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
 
-    const handleDeletePost = async (postId) => {
-        try {
-            let response = await fetch(
-                "api/deletePost?id=" + postId,
-                {
-                    method: "DELETE",
-                    headers: {
-                        Accept: "application/json, text/plain, */*",
-                        "Content-Type": "application/json",
-                    },
-                }
-            );
-            response = await response.json();
-        } catch (error) {
-            console.log("An error occurred while deleting ", error);
-        }
+    const startIndex = POST_PER_PAGE * (currentPage - 1);
+    const endIndex = startIndex + POST_PER_PAGE;
+    const visiblePosts = sortedPosts.slice(0, endIndex);
+
+    const hasNext = endIndex < sortedPosts.length;
+
+    const loadMorePosts = () => {
+        setCurrentPage((prevPage) => prevPage + 1);
+
     };
 
-    // const count = 12;
-
-    // const POST_PER_PAGE = 4;
-
-    // const hasPrev = POST_PER_PAGE * (posts - 1) > 0;
-    // const hasNext = POST_PER_PAGE * (posts - 1) + POST_PER_PAGE < count;
-
-    // const limitposts = blogData.posts.slice(0, POST_PER_PAGE);
     return (
 
         <Container className="flex gap-x-8 flex-col">
 
             <BlogFeatured />
 
-            {posts.length > 0 ? (
-                <ul className="posts-list">
-                    {posts.map((post, index) => {
-                        return (
-                            <li key={index} className="post-item">
-                                <div className="post-item-details">
-                                    <h2>{post.title}</h2>
+            {visiblePosts.length > 0 ? (
+                <div className="py-16">
+                    <h1 className={styles.title}> All Posts</h1>
+                    <hr className="pb-8" />
 
-                                    <p>{post.content}</p>
-                                </div>
-                                <div className="post-item-actions">
-                                    <a href={`/posts/${post._id}`}>Edit</a>
-                                    <button onClick={() => handleDeletePost(post._id)}>
-                                        Delete
-                                    </button>
-                                </div>
-                            </li>
-                        );
-                    })}
-                </ul>
+                    {visiblePosts.map((item) => (
+                        <Card item={item} key={item._id} withImage={true} />
+                    ))}
+                    <div className={styles.content}>
+                        <button onClick={loadMorePosts} disabled={!hasNext} className="px-12 py-4 font-bold text-center text-main-color disabled:text-slate-500 bg-button-bg disabled:bg-slate-200 w-auto rounded-md ">
+
+                            Load More
+                        </button>
+                    </div>
+                </div>
+
             ) : (
                 <h2 className="posts-body-heading">Ooops! No posts added so far</h2>
             )}
-            {/* <div className="py-16">
-                <h1 className={styles.title}>{cat} All Posts</h1>
-                <hr className="pb-8" />
-                <div className={styles.content}>
-                    {limitposts?.map((item) => (
-                        <Card item={item} key={item._id} withImage={true} />
-                    ))}
-                    <Pagination page={page} hasPrev={hasPrev} hasNext={hasNext} />
-                </div>
-            </div> */}
+
             <CategoryList />
             <Join />
         </Container>

@@ -15,14 +15,14 @@ const Card = ({ key, item, withImage }) => {
                 <div className={styles.category}>
                     {item.catSlug}
                     <span className={styles.date}>
-                        {item.createdAt}
+                        {new Date(item.createdAt).toLocaleString()}
                     </span>
                 </div>
 
                 <Link href="#" className={styles.postTitle}>
                     <h2>{item.title}</h2>
                 </Link>
-                <p>{item.desc}</p>
+                <p>{item.content}</p>
             </div>
 
         </div >

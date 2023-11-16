@@ -33,6 +33,14 @@
 
 }
 
+.content {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
 .slug {
 
     font-size: 16px;
