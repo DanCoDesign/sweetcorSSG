@@ -1,5 +1,5 @@
-// 'use client'
-// import { useState } from "react";
+"use client"
+import { useState, useEffect } from "react";
 import styles from "./blogPage.module.css";
 import BlogFeatured from "./blogFeatured";
 import CategoryList from "@/components/categoryList/CategoryList";
@@ -10,28 +10,35 @@ import Pagination from "@/components/pagination/Pagination";
 import Card from "../../components/card/Card";
 import blogData from '../API.json';
 
-export async function getServerSideProps() {
-    try {
-        let response = await fetch('api/getPosts');
-        let posts = await response.json();
-        console.log(posts + "avem");
-        return {
-            props: { posts: JSON.parse(JSON.stringify(posts)) },
+export default function Posts() {
+
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('/api/getPosts');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch posts');
+                }
+                const data = await response.json();
+                setPosts(data.posts);
+            } catch (error) {
+                console.error('Error fetching posts:', error);
+            }
         };
-    } catch (e) {
-        console.error(e);
-    }
-}
 
-export default function Posts( posts ) {
+        fetchData();
+    }, []);
 
-    
+
+
     const handleDeletePost = async (postId) => {
         try {
             let response = await fetch(
                 "api/deletePost?id=" + postId,
                 {
-                    method: "POST",
+                    method: "DELETE",
                     headers: {
                         Accept: "application/json, text/plain, */*",
                         "Content-Type": "application/json",
@@ -39,7 +46,6 @@ export default function Posts( posts ) {
                 }
             );
             response = await response.json();
-            window.location.reload();
         } catch (error) {
             console.log("An error occurred while deleting ", error);
         }
@@ -54,8 +60,8 @@ export default function Posts( posts ) {
 
     // const limitposts = blogData.posts.slice(0, POST_PER_PAGE);
     return (
-      
-       <Container className="flex gap-x-8 flex-col">
+
+        <Container className="flex gap-x-8 flex-col">
 
             <BlogFeatured />
 
