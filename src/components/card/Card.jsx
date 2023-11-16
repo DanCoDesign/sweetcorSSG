@@ -15,7 +15,7 @@ const Card = ({ key, item, withImage }) => {
                 <div className={styles.category}>
                     {item.catSlug}
                     <span className={styles.date}>
-                        {new Date(item.createdAt).toLocaleString()}
+                        {new Date(item.createdAt).toLocaleString('en-US', { month: 'numeric', day: 'numeric', year: 'numeric' })}
                     </span>
                 </div>
 

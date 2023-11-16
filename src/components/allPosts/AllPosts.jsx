@@ -3,6 +3,7 @@ import styles from "./allposts.module.css";
 import Link from "next/link";
 
 import blogData from '../../app/API.json'; // Importing dummy JSON data
+import DisplayPosts from "@/app/blog/displayPosts";
 
 const AllPosts = () => {
 
@@ -17,7 +18,7 @@ const AllPosts = () => {
                 </h1>
                 <span className="link">View All</span>
             </div>
-            {limitPosts?.map((item) => (
+            {/* {limitPosts?.map((item) => (
                 <div className={["dark:hover:bg-[#2E3040]", styles.textContainer].join(" ")} key={item.id}>
                     <div className={styles.contentContainer}>
                         <div className={styles.category}>
@@ -34,7 +35,8 @@ const AllPosts = () => {
                     </div>
 
                 </div >
-            ))}
+            ))} */}
+            <DisplayPosts numberOfPosts={3} withImage={false} loadmore={false} />
         </section>
 
     );
