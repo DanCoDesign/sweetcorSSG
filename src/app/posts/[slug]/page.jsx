@@ -2,15 +2,26 @@
 import styles from "./singlePage.module.css";
 import Image from "next/image";
 import Link from "next/link";
-
-import blogData from '../API.json'; // Importing dummy JSON data
-import NextReading from "./nextreading";
+//import NextReading from "./nextreading";
 import Join from "@/components/JoinUs/joinUs";
+
+const getData = async (slug) => {
+    console.log(slug);
+    const res = await fetch(process.env.NEXTAUTH_URL + `/api/posts/${slug}`, {
+        cache: "no-store",
+    });
+
+    if (!res.ok) {
+        throw new Error("Failed");
+    }
+
+    return res.json();
+};
 
 const SinglePage = async ({ params }) => {
     const { slug } = params;
 
-    const item = blogData.posts[2];
+    const data = await getData(slug);
 
 
 
@@ -18,40 +29,40 @@ const SinglePage = async ({ params }) => {
         <main className={["dark:hover:bg-[#2E3040]", styles.container].join(" ")}>
             <div className={styles.infoContainer}>
                 <div className={styles.date}>
-                    Posted on {item.createdAt}
+                    Posted on {data.createdAt}
                 </div>
 
                 <Link href="#" className={styles.postTitle}>
-                    <h1>{item.title}</h1>
+                    <h1>{data.title}</h1>
                 </Link>
 
                 <div className={styles.category}>
-                    Category:<h4 className="inline link underline decoration-dotted px-1">{item.catSlug}</h4>
+                    Category:<h4 className="inline link underline decoration-dotted px-1">{data.catSlug}</h4>
                 </div>
 
             </div>
             <div className={styles.imageContainer}>
-                <Image src={item.img} alt="" layout="fill" className={styles.image} />
+                <Image src={data.img} alt="" layout="fill" className={styles.image} />
             </div>
 
 
             <div className={styles.contentContainer}>
 
-                <p>{item.desc}</p>
+                
 
-                {/* <div className={styles.content}>
+                <div className={styles.content}>
                     <div className={styles.post}>
-                        {/* <div
-                        className={styles.description}
-                        dangerouslySetInnerHTML={{ __html: item?.desc }}
-                    />
+                        <div
+                            className={styles.description}
+                            dangerouslySetInnerHTML={{ __html: data?.content }}
+                        />
                     </div>
-                </div> 
-                */}
+                </div>
+
             </div>
             <section className="pt-32 pb-16">
                 <h2 className="pb-16">What to read next</h2>
-                <NextReading nextslug={slug} />
+                {/* <NextReading nextslug={slug} /> */}
             </section>
             <hr />
             <section className="flex">

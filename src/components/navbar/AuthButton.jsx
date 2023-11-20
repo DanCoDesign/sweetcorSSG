@@ -28,10 +28,10 @@ const AuthButton = () => {
             {
                 session &&
                 <button
-                    onClick={() => push('/write')}
+                    onClick={() => push('/dashboard')}
                     className="px-12 py-3 font-bold text-center text-main-color bg-button-bg w-auto rounded-md">
                     <div className="flex justify-between items-center text-base">
-                        Write Article
+                        Dashboard
                     </div>
                 </button>
             }

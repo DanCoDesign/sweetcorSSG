@@ -2,7 +2,6 @@
 import styles from "./nextreading.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import blogData from '../API.json'; // Importing dummy JSON data
 
 const NextReading = ({ nextslug }) => {
 
