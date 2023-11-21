@@ -1,11 +1,8 @@
 "use client";
 
 import { signOut } from "next-auth/react";
-import { useSession } from "next-auth/react";
 
 export default function UserInfo({prop}) {
-    const { data: session } = useSession();
-
     return (
         <div className="grid place-items-center">
             <div className=" p-8 bg-zince-300/10 flex flex-row items-center ">

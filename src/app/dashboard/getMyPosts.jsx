@@ -2,14 +2,14 @@
 import { useState, useEffect } from "react";
 import Card from "../../components/card/Card";
 
-export default function GetMyPosts() {
-
+export default function GetMyPosts({ user }) {
+    const userToFetch = user ? user.email : '';
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('/api/getPosts');
+                const response = await fetch(`http://localhost:3000/api/getPosts/?author=${userToFetch}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch posts');
                 }
@@ -21,30 +21,30 @@ export default function GetMyPosts() {
         };
 
         fetchData();
-    }, []);
+    }, [user]);
 
-    const handleDeletePost = async (postId) => {
-        console.log(postId);
-        try {
-            const response = await fetch('/api/deletePost', {
-                method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ id: postId }),
-            });
+    // const handleDeletePost = async (postId) => {
+    //     console.log(postId);
+    //     try {
+    //         const response = await fetch('/api/deletePost', {
+    //             method: 'DELETE',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify({ id: postId }),
+    //         });
 
-            if (response.ok) {
+    //         if (response.ok) {
 
-                console.log('Post deleted successfully');
-            } else {
+    //             console.log('Post deleted successfully');
+    //         } else {
 
-                console.error('Error deleting post');
-            }
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    };
+    //             console.error('Error deleting post');
+    //         }
+    //     } catch (error) {
+    //         console.error('Error:', error);
+    //     }
+    // };
 
     const sortedPosts = posts?.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
@@ -56,7 +56,7 @@ export default function GetMyPosts() {
                         sortedPosts.map((item) => (
                             <div className="flex flex-row align-middle" key={item._id}>
                                 <Card item={item} />
-                                <button onClick={() => handleDeletePost(item._id)}>Delete</button>
+                                <button onClick={() => handleEditPost(item._id)}>Edit</button>
                             </div>
 
                         ))

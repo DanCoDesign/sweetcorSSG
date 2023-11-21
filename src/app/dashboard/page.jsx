@@ -10,6 +10,7 @@ import GetMyPosts from "./getMyPosts";
 
 const Dashboard = () => {
     const { data: session } = useSession();
+
     return (
         <Container className="flex flex-col relative">
             <h1 className={styles.title}>Dashboard</h1>
@@ -17,7 +18,7 @@ const Dashboard = () => {
 
             <section>
                 <h2>My Posts</h2>
-                <GetMyPosts />
+                <GetMyPosts user={session?.user} />
             </section>
 
             <WritePost />

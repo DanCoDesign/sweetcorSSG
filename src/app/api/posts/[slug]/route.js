@@ -9,9 +9,9 @@ export const GET = async (req, { params }) => {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
-  console.log(slug);
+  
   try {
-
+    console.log(slug);
     await clientPromise();
     const post = await Post.findOne({
       _id: new ObjectId(slug),
