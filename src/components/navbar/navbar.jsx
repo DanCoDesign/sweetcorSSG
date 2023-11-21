@@ -76,15 +76,16 @@ const Navbar = () => {
                       </svg>
                     </Disclosure.Button>
 
-                    <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden justify-center ">
-                      <><div className=""></div>
+                    <Disclosure.Panel className="flex flex-col w-full my-5 lg:hidden justify-center ">
+                      <>
                         {navigation.map((item, index) => (
                           <Link key={index} href={item.route} className="w-full px-4 py-2 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none">
                             {item.name}
                           </Link>
 
                         ))}
-
+                        <AuthButton />
+                        <ThemeChanger />
                       </>
                     </Disclosure.Panel>
                   </div>
@@ -102,20 +103,13 @@ const Navbar = () => {
                     <Link href={menu.route} className="inline-block px-4 py-2 text-base font-normal no-underline hover:text-button-bg focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
                       {menu.name}
                     </Link>
+
                   </li>
+
                 ))}
+                <li className="mr-4 nav__item"> <AuthButton /></li>
+                <li className="mr-4 nav__item"> <ThemeChanger /></li>
               </ul>
-            </div>
-
-            <div className="py-4 lg:py-0 space-x-4 lg:flex nav__item mx-auto">
-
-              <AuthButton />
-
-
-
-              <ThemeChanger />
-
-
             </div>
           </nav>
         </Container>

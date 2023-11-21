@@ -4,13 +4,15 @@ import { NextResponse } from "next/server";
 
 export async function POST(req) {
   try {
-    const { id } = req.query;
+    const { searchParams } = new URL(req.url);
+    // const keys = Array.from(searchParams.keys());
+    const postID = searchParams.get("_id");
     const { title, content } = await req.json();
     console.log(title, content);
     await clientPromise();
     await Post.updateOne(
       {
-        _id: ObjectId(id),
+        _id: ObjectId(postID),
       },
       {
         $set: {

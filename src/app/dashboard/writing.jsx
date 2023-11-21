@@ -48,18 +48,18 @@ const WritePost = () => {
     return (
         <form onSubmit={handleSubmit} className={styles.editor}>
 
-            <div className="form-group">
-                <label>Title</label>
-                <input
+            <div className={styles['form-group']}>
+                <label className={styles.label}>Title</label>
+                <input className={styles.input}
                     type="text"
                     placeholder="Title of the post"
                     onChange={(e) => setTitle(e.target.value)}
                     value={title || ''}
                 />
             </div>
-            <div className="form-group">
-                <label>Content</label>
-                <textarea
+            <div className={styles['form-group']}>
+                <label className={styles.label}>Content</label>
+                <textarea className={styles.textarea}
                     name="content"
                     placeholder="Content of the post"
                     value={content || ''}
@@ -68,9 +68,9 @@ const WritePost = () => {
                     rows={8}
                 />
             </div>
-            <input className="hidden" value={author} />
-            <div className="form-group">
-                <button type="submit" className="submit_btn">
+            <input className={styles.hidden} value={author} />
+            <div className={styles['form-group']}>
+                <button type="submit" className={styles.submit_btn}>
                     Add Post
                 </button>
             </div>

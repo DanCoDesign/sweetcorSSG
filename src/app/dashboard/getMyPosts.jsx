@@ -23,15 +23,19 @@ export default function GetMyPosts({ user }) {
         fetchData();
     }, [user]);
 
-    // const handleDeletePost = async (postId) => {
+    // const handleEditPost = async (postId) => {
+    //     e.preventDefault();
     //     console.log(postId);
     //     try {
-    //         const response = await fetch('/api/deletePost', {
+    //         const response = await fetch(`/api/deletePost?postID=${postId}`, {
     //             method: 'DELETE',
     //             headers: {
     //                 'Content-Type': 'application/json',
     //             },
-    //             body: JSON.stringify({ id: postId }),
+    //             body: JSON.stringify({
+    //                 title,
+    //                 content,
+    //             }),
     //         });
 
     //         if (response.ok) {
@@ -54,9 +58,9 @@ export default function GetMyPosts({ user }) {
                 <>
                     {
                         sortedPosts.map((item) => (
-                            <div className="flex flex-row align-middle" key={item._id}>
+                            <div className="flex flex-row align-middle px-4 my-8" key={item._id}>
                                 <Card item={item} />
-                                <button onClick={() => handleEditPost(item._id)}>Edit</button>
+                                <button onClick={() => handleEditPost(item._id)} className="text-main-color bg-button-bg inline-flex items-center justify-center py-3 px-7 text-center text-base font-medium hover:text-button-bg hover:bg-gray-500 my-auto">Edit</button>
                             </div>
 
                         ))

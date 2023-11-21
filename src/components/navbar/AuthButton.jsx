@@ -9,16 +9,14 @@ const AuthButton = () => {
 
     const handleAuthentication = () => {
         if (session) {
-            // User is authenticated, so log them out
             signOut();
         } else {
-            // User is not authenticated, so redirect to login page
             push('/login');
         }
     }
 
     return (
-        <div className='flex items-center'>
+        <div className='flex items-center flex-col lg:flex-row space-y-4 my-4 lg:space-y-0 lg:my-0'>
             <button
                 onClick={handleAuthentication}
                 rel="noopener"
