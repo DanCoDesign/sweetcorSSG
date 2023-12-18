@@ -1,7 +1,11 @@
 "use client"
 import { useState, useEffect } from 'react'
 import styles from "../about.module.css"
+const herobg = {
+    backgroundImage:
+        "url('./teamPhoto-large.png')",
 
+};
 const Counter = ({ endValue, label }) => {
     const [count, setCount] = useState(0);
 
@@ -30,7 +34,7 @@ const Counter = ({ endValue, label }) => {
 export default function Overview() {
 
     return (
-        <section className={styles.bg_img}>
+        <section className={styles.bg_img} style={herobg}>
             <div className="lg:px-20 flex flex-col flex-start">
 
                 <div className="flex flex-col md:flex-row items-center px-8 bg-opacity-75 md:bg-opacity-100 bg-[#FFD050] justify-evenly max-w-md lg:max-w-xl">
