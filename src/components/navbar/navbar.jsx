@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <div className="w-full bg-main-color px-8">
-        <Container className="py-4">
+        <Container className="py-6">
           <nav className="relative flex flex-wrap items-center mx-auto xl:px-0 text-white">
 
             {/* Logo  */}
@@ -100,7 +100,7 @@ const Navbar = () => {
               <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
                 {navigation.map((menu, index) => (
                   <li className="mr-3 nav__item" key={index}>
-                    <Link href={menu.route} className="inline-block px-4 py-2 text-base font-normal no-underline hover:text-button-bg focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
+                    <Link href={menu.route} className="inline-block px-4 py-2 text-base font-normal no-underline hover:text-button-bg focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800 focus:rounded-md">
                       {menu.name}
                     </Link>
 

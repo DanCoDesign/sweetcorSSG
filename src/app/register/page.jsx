@@ -7,7 +7,7 @@ import styles from "../login/loginPage.module.css";
 export default async function Register() {
     const session = await getServerSession(authOptions);
 
-    if (session) redirect("/write");
+    if (session) redirect("/dashboard");
 
     return (
         <div className={styles.container}>
