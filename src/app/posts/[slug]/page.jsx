@@ -29,7 +29,7 @@ const SinglePage = async ({ params }) => {
         <main className={["dark:hover:bg-[#2E3040]", styles.container].join(" ")}>
             <div className={styles.infoContainer}>
                 <div className={styles.date}>
-                    Posted on {data.createdAt}
+                Posted on {new Date(data.createdAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
                 </div>
 
                 <Link href="#" className={styles.postTitle}>

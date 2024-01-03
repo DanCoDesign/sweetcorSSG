@@ -10,9 +10,13 @@ const PostSchema = new Schema(
       type: 'string',
       required: true
     },
-    author: {
+    img: {
       type: 'string',
     },
+    author: {
+      type: 'string',
+    }
+
   },
   // tags: { type: [String] },
   { timestamps: true }

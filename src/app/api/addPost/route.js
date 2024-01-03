@@ -4,9 +4,9 @@ import { NextResponse } from "next/server";
 
 export async function POST(req) {
   try {
-    const { title, content, author } = await req.json();
+    const { title, content, author, image } = await req.json();
     await clientPromise();
-    await Post.create({ title: title, content: content, author: author });
+    await Post.create({ title: title, content: content, img: image, author: author });
 
     return NextResponse.json({ message: "Blog Post Created" }, { status: 201 });
 

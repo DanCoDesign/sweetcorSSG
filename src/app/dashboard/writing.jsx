@@ -8,6 +8,7 @@ const WritePost = () => {
     const author = session?.user?.email;
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
+    const [image, setImage] = useState("");
     const [error, setError] = useState(null);
     const [message, setMessage] = useState(null);
 
@@ -27,7 +28,8 @@ const WritePost = () => {
                 body: JSON.stringify({
                     title,
                     content,
-                    author
+                    image,
+                    author,
                 }),
 
             });
@@ -35,6 +37,7 @@ const WritePost = () => {
                 setTitle("");
                 setContent("");
                 setError("");
+                setImage("");
                 setMessage("Post added successfully");
             }
         } catch (errorMessage) {
@@ -68,7 +71,18 @@ const WritePost = () => {
                     rows={8}
                 />
             </div>
-            <input className={styles.hidden} value={author} />
+            <div className={styles['form-group']}>
+                <div className="flex w-full items-center space-x-2"><label className={styles.label}>Image: </label>
+                    <input className={styles.input}
+                        type="text"
+                        placeholder="Link to the image you want to display"
+                        onChange={(e) => setImage(e.target.value)}
+                        value={image || ''}
+                    />
+                </div>
+
+            </div>
+            <input className={styles.hidden} value={author} readOnly />
             <div className={styles['form-group']}>
                 <button type="submit" className={styles.submit_btn}>
                     Add Post

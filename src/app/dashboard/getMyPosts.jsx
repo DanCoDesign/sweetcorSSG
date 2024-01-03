@@ -70,7 +70,7 @@ export default function GetMyPosts({ user }) {
                 </>
 
             ) : (
-                <h2 className="posts-body-heading">No posts added so far</h2>
+                <h2 className="posts-body-heading">Loading Posts...</h2>
             )
             }
         </>

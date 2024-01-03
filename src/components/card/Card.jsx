@@ -5,7 +5,7 @@ import Image from "next/image";
 const Card = ({ item, withImage }) => {
     return (
         <div className={`${styles.textContainer} dark:hover:bg-[#2E3040]`} key={item._id}>
-            <Link href={`/posts/${item._id}`}>
+            <Link href={`/posts/${item._id}`} className="flex space-x-4 items-start"> 
                 {withImage && (
                     <div className={styles.imageContainer}>
                         <Image src={item.img} alt="" fill className={styles.image} />
@@ -15,7 +15,7 @@ const Card = ({ item, withImage }) => {
                     <div className={styles.category}>
                         {item.catSlug}
                         <span className={styles.date}>
-                            {new Date(item.createdAt).toLocaleString('en-US', { month: 'numeric', day: 'numeric', year: 'numeric' })}
+                            {new Date(item.createdAt).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
                         </span>
                     </div>
 
