@@ -15,6 +15,10 @@
     padding: 0 32px;
 }
 
+.title > h1{
+    padding: 0;
+}
+
 .contentContainer {
    padding: 25px 32px;
 }

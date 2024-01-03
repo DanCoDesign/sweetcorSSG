@@ -3,7 +3,7 @@ import { useState, useEffect, Children } from "react";
 import styles from "./blogPage.module.css";
 import Card from "../../components/card/Card";
 
-export default function DisplayPosts({ numberOfPosts, withImage, loadmore }) {
+export default function DisplayPosts({ numberOfPosts, withImage, loadmore, featured }) {
     const [currentPage, setCurrentPage] = useState(1);
     const [posts, setPosts] = useState([]);
 
@@ -42,7 +42,7 @@ export default function DisplayPosts({ numberOfPosts, withImage, loadmore }) {
                 <>
                     {
                         visiblePosts.map((item) => (
-                            <Card item={item} key={item._id} withImage={withImage} />
+                            <Card item={item} key={item._id} withImage={withImage} featured={featured} />
                         ))
                     }
                     {

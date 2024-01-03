@@ -6,6 +6,7 @@ const heroBg = {
   minHeight: 720,
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
+  layout:"fill"
 };
 
 const Hero = () => {
@@ -13,8 +14,7 @@ const Hero = () => {
     <section style={heroBg} className="flex items-center text-white px-8">
       <Container>
 
-        <span>Posted On <span>CATEGORY</span></span>
-        <div className="w-full lg:w-5/12 flex flex-col ">
+       <div className="w-full lg:w-5/12 flex flex-col ">
           <h1 className="text-white capitalize mb-3 text-4xl font-bold leading-snug sm:text-[40px] lg:text-[42px] xl:text-[48px]">
             Your Website’s Essence Captured in One Headline
           </h1>
@@ -23,7 +23,7 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col items-center py-3 space-y-3 sm:space-x-4 lg:space-y-0 md:flex-row justify-center lg:justify-start ">
-            <BookAMeeting title="Read More >" />
+            <BookAMeeting title="Read More >" link={`/register`} /> 
           </div>
 
 

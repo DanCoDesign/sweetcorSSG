@@ -14,7 +14,7 @@ const WritePost = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!title || !content) {
+        if (!title || !content || !image) {
             setError("All fields are necessary.");
             return;
         }
@@ -46,7 +46,10 @@ const WritePost = () => {
 
     };
 
-
+    const handleRandomImage = () => {
+        const randomId = Math.floor(Math.random() * 30) + 1;
+        setImage(`https://picsum.photos/id/${randomId}/1200/900`);
+    };
 
     return (
         <form onSubmit={handleSubmit} className={styles.editor}>
@@ -72,13 +75,15 @@ const WritePost = () => {
                 />
             </div>
             <div className={styles['form-group']}>
-                <div className="flex w-full items-center space-x-2"><label className={styles.label}>Image: </label>
+                <div className="flex w-full items-center space-x-2">
+                    <label className={styles.label}>Image: </label>
                     <input className={styles.input}
                         type="text"
                         placeholder="Link to the image you want to display"
                         onChange={(e) => setImage(e.target.value)}
                         value={image || ''}
                     />
+                    <div className={styles.randombtn} onClick={handleRandomImage}>Random Image</div>
                 </div>
 
             </div>

@@ -10,7 +10,7 @@ const Why = () => {
                 <span className={styles.span}>Why we started</span>
                 <h1 className={styles.h1}>It started out as a simple idea and evolved into our passion</h1>
                 <p className={styles.p}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-                <BookAMeeting title="Discover our story >" />
+                <BookAMeeting title="Discover our story >" link={`/register`} />
             </div>
             <div className={styles.featured}>
                 <div className={styles.firstcolumn}>

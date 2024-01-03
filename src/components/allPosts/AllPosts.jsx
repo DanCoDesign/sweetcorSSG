@@ -11,7 +11,7 @@ const AllPosts = () => {
                 <h1>
                     All Posts
                 </h1>
-                <span className="link">View All</span>
+                <Link href={`/blog`} className="link"><span >View All</span></Link>
             </div>
            
             <DisplayPosts numberOfPosts={3} withImage={false} loadmore={false} />
