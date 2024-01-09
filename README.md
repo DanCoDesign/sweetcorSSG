@@ -1,5 +1,5 @@
 
-<div align='center'>![sweetcor](https://github.com/DaneConstantin/sweetcorSSG/assets/145013631/88ed8fed-5479-47d3-a101-7b5fa8547eb5)
+<div align='center'><img src='https://github.com/DaneConstantin/sweetcorSSG/assets/145013631/88ed8fed-5479-47d3-a101-7b5fa8547eb5' />
 </div>
 
 <h2>About the project</h2>
