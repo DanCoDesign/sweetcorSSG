@@ -80,8 +80,19 @@
     .title {
 
         margin-bottom: 0px;
+        text-align: center;
 
     }
+    .post {
+        padding: 0 8px;
+    }
+    .container {
+        position: relative;
+        padding: 8px;
+        display: flex;
+        background: #F4F0F8;
+    }
+    
 }
 
 @media screen and (max-width: 1024px) {

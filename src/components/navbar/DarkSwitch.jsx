@@ -13,10 +13,10 @@ export const ThemeChanger = () => {
 
   return (
     <div className="flex items-center justify-center pt-4 lg:py-0">
-      {theme === "dark" ? (
+      {theme === "light" ? (
         <button
-          onClick={() => setTheme("light")}
-          className="text-gray-300 rounded-full outline-none focus:outline-none">
+          onClick={() => setTheme("dark")}
+          className="text-yellow-300 rounded-full outline-none focus:outline-none">
           <span className="sr-only">Light Mode</span>
 
           <svg
@@ -31,8 +31,8 @@ export const ThemeChanger = () => {
         </button>
       ) : (
         <button
-          onClick={() => setTheme("dark")}
-          className="text-gray-500 rounded-full outline-none focus:outline-none focus-visible:ring focus-visible:ring-gray-100 focus:ring-opacity-20">
+          onClick={() => setTheme("light")}
+          className="text-yellow-500 rounded-full outline-none focus:outline-none focus-visible:ring focus-visible:ring-gray-100 focus:ring-opacity-20">
           <span className="sr-only">Dark Mode</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"

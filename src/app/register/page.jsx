@@ -20,7 +20,7 @@ export default async function Register() {
                         </h1>
 
                         <p className="text-gray-500 dark:text-gray-400 pb-8">
-                            Register with email please
+                        Register with email to access and post articles
                         </p>
                     </div>
                     <RegisterForm />

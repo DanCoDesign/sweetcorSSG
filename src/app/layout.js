@@ -8,8 +8,8 @@ import { AuthProvider } from './providers/Providers';
 const inter = Sen({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Blog App',
-  description: 'The best blog app!',
+  title: 'Sweetcor Blog',
+  description: 'The best custom blog app!',
 }
 
 export default function RootLayout({ children }) {

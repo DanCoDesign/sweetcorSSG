@@ -60,7 +60,7 @@ export default function DisplayPosts({ numberOfPosts, withImage, loadmore, featu
                 </>
 
             ) : (
-                <h2 className="posts-body-heading">Ooops! No posts added so far</h2>
+                <h2 className="posts-body-heading">Loading Posts...</h2>
             )
             }
         </>

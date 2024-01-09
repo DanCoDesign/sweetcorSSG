@@ -3,7 +3,7 @@ import Container from "../Container";
 const heroBg = {
   backgroundImage:
     "url('./herobg.png')",
-  minHeight: 720,
+
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   layout:"fill"
@@ -11,12 +11,12 @@ const heroBg = {
 
 const Hero = () => {
   return (
-    <section style={heroBg} className="flex items-center text-white px-8">
+    <section style={heroBg} className="flex items-center text-white px-8 min-h-[450px] lg:min-h-[720px]">
       <Container>
 
        <div className="w-full lg:w-5/12 flex flex-col ">
           <h1 className="text-white capitalize mb-3 text-4xl font-bold leading-snug sm:text-[40px] lg:text-[42px] xl:text-[48px]">
-            Your Website’s Essence Captured in One Headline
+            Your Website&apos;s Essence Captured in One Headline
           </h1>
           <p className="mb-8 max-w-5/12 text-base text-white">
             The featured post section description is a succinct follow-up to a compelling headline. Keep it brief, straightforward, and pointedly descriptive.
