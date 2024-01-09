@@ -7,7 +7,7 @@
 
  The app is designed with simplicity in mind. Posting a new blog post gets it to the top of the list.
 
-The app brings together React, Next.js, MongoDB, and TailwindCSS to create a seamless and enjoyable experience. 
+Created with React, Next.js, MongoDB, and TailwindCSS to provide a seamless and enjoyable experience. 
 The <b>frontend</b>, powered by React and Next.js, ensures a user-friendly interface, making navigation a breeze. <br/>
 MongoDB takes care of the data <b>behind</b> the scenes, offering a reliable and secure storage solution for posts. <br/>
 
