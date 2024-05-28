@@ -32,7 +32,7 @@ export const GET = async (req) => {
     try {
 
       await clientPromise();
-      const posts = await Post.find({}).limit(10);
+      const posts = await Post.find({});
       return NextResponse.json({ posts }, { status: 200 });
 
     } catch (error) {

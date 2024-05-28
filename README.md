@@ -4,7 +4,6 @@
 
 <h2>About the project</h2>
 
-Work Date: October-December 2023
 
 <p><b>SweetCor</b> is a Full-Stack Blog Application that allows anyone to create an account and create a blog post.
 

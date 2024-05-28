@@ -12,7 +12,7 @@ export default function UserInfo({prop}) {
                 </div>
                 <button
                     onClick={() => signOut()}
-                    className="px-12 py-4 font-bold text-center text-main-color bg-button-bg whitespace-nowrap">
+                    className="px-12 py-4 font-bold text-center rounded-md text-main-color bg-button-bg whitespace-nowrap">
                     <div className="flex justify-between items-center text-base">
                         Log Out
 

@@ -12,8 +12,9 @@ import Join from "@/components/JoinUs/joinUs";
 export default function Home() {
 
   return (
-    <>
 
+
+    <main id="content" className="min-h-screen">
       <Hero />
       <Container className="flex gap-x-8 flex-col lg:flex-row md:px-12 lg:px-20 ">
         <Featured />
@@ -28,7 +29,6 @@ export default function Home() {
         <Testimonial />
         <Join />
       </Container>
-
-    </>
+    </main>
   );
 }
