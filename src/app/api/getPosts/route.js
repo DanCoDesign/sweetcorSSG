@@ -17,7 +17,6 @@ export const GET = async (req) => {
 
       await clientPromise();
       const posts = await Post.find({ author: author });
-      console.log(posts);
       return NextResponse.json({ posts }, { status: 200 });
 
     } catch (error) {

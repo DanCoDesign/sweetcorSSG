@@ -6,6 +6,7 @@ import Container from "@/components/Container";
 import UserInfo from "@/components/login/UserInfo";
 import WritePost from "./writing";
 import GetMyPosts from "./getMyPosts";
+import GetAdminRights from "./GetAdminRights";
 
 const Dashboard = () => {
     const { data: session } = useSession();
@@ -34,7 +35,14 @@ const Dashboard = () => {
                 {showWritePost && <WritePost />}
             </section>
 
-<hr />
+            <hr />
+
+            <section className="mx-auto w-full lg:px-8">
+
+                <GetAdminRights user={session?.user} />
+            </section>
+
+            <hr />
 
             <section className="mx-auto w-full lg:px-8">
 

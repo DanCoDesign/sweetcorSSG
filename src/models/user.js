@@ -9,6 +9,10 @@ const userSchema = new Schema(
             type: 'string',
             required: true,
         },
+        admin: {
+            type: 'boolean',
+            required: true,
+        }
     },
     { timestamps: true }
 );

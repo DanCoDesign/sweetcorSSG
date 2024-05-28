@@ -6,7 +6,7 @@ import BookAMeeting from "../ActionButton";
 const Card = ({ item, withImage, featured }) => {
     return (
         <div className={`${featured ? `${styles.featuredContainer}` : `${styles.textContainer} dark:hover:bg-[#2E3040]`}`} key={item._id}>
-            <Link href={`/posts/${item._id}`} className={`flex space-x-4 items-start ${featured ? 'flex-col' : ''}`}>
+            <Link href={`/posts/${item._id}`} className={`flex space-x-4 items-start ${featured ? 'flex-row-reverse gap-14' : ''}`}>
                 {withImage && (
                     featured ? (
                         <div className={styles.featuredimageContainer}>
@@ -31,10 +31,11 @@ const Card = ({ item, withImage, featured }) => {
                     <h2>{item.title}</h2>
 
                     {withImage ? (<p>{item.content.split(' ').slice(0, 40).join(' ')}...</p>) : (<p>{item.content.split(' ').slice(0, 20).join(' ')}...</p>)}
+                    <div className="flex my-8">{featured && (<BookAMeeting title="Read More >" link={`/posts/${item._id}`} />)}</div>
                 </div>
             </Link>
-            <div className="flex">{featured && (<BookAMeeting title="Read More >" link={`/posts/${item._id}`} />)}</div>
-            
+
+
         </div>
     );
 }

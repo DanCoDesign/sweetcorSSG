@@ -8,6 +8,7 @@ export default function RegisterForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+    const [admin, setAdmin] = useState(false);
 
     const router = useRouter();
 
@@ -20,6 +21,7 @@ export default function RegisterForm() {
         }
 
         try {
+            // Check if user exists
             const resUserExists = await fetch("api/userExists", {
                 method: "POST",
                 headers: {
@@ -37,6 +39,22 @@ export default function RegisterForm() {
 
 
 
+            // Check if any users exist in the database
+            const resCheckUsers = await fetch("/api/checkUsers", {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+
+            const { usersExist } = await resCheckUsers.json();
+            console.log(usersExist, "iaci");
+            if (!usersExist) {
+                setAdmin(true); // Set admin to true if no users exist
+            }
+
+
+            // Register new user
             const res = await fetch("api/register", {
                 method: "POST",
                 headers: {
@@ -46,6 +64,7 @@ export default function RegisterForm() {
 
                     email,
                     password,
+                    admin,
                 }),
             });
 

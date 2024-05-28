@@ -33,7 +33,6 @@ export default function GetMyPosts({ user }) {
             setShowWritePost(true);
         }
     };
-    console.log(postToEdit);
 
 
     const sortedPosts = posts?.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));

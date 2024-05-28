@@ -92,6 +92,8 @@ const WritePost = () => {
                 <button type="submit" className={styles.submit_btn}>
                     Add Post
                 </button>
+                {message}
+                {error}
             </div>
         </form>
     )

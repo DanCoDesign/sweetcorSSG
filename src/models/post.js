@@ -15,8 +15,11 @@ const PostSchema = new Schema(
     },
     author: {
       type: 'string',
-    }
-
+    },
+    isFeatured: {
+      type: 'boolean',
+      default: false,
+    },
   },
   // tags: { type: [String] },
   { timestamps: true }
