@@ -76,13 +76,15 @@ export default function GetAdminRights({ user }) {
     return (
         <>
             {showAdminRights ? (
-                <div className="flex flex-col gap-4">
-                    <h3>Set Feature Post</h3>
-                    <p>Here you can change the featured post from Homepage and /blog. </p>
-                    <form onSubmit={handleSetFeaturedPost} className="flex flex-col md:flex-row md:flex-wrap gap-4 items-center">
+                <div className="flex flex-col ">
+                    
+                        <h2>Set Feature Post</h2>
+                        <p>Here you can change the featured post from Homepage and /blog. </p>
+                    
+                    <form onSubmit={handleSetFeaturedPost} className="flex flex-col md:flex-row md:flex-wrap gap-4 items-center my-8">
                         <label htmlFor="post-select">Select Post:</label>
                         <select
-                            className="p-2 rounded-md bg-slate-200 dark:bg-slate-500"
+                            className="p-2 rounded-md bg-slate-200 dark:bg-slate-500 w-full lg:w-auto"
                             id="post-select"
                             value={selectedPost}
                             onChange={(e) => setSelectedPost(e.target.value)}

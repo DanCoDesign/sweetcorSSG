@@ -6,7 +6,7 @@ import Link from "next/link";
 import Join from "@/components/JoinUs/joinUs";
 
 const getData = async (slug) => {
-    console.log(slug);
+
     const res = await fetch(process.env.NEXTAUTH_URL + `/api/posts/${slug}`, {
         cache: "no-store",
     });
@@ -29,16 +29,16 @@ const SinglePage = async ({ params }) => {
         <main className={["dark:hover:bg-[#2E3040]", styles.container].join(" ")}>
             <div className={styles.infoContainer}>
                 <div className={styles.date}>
-                Posted on {new Date(data.createdAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                    Posted on {new Date(data.createdAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
                 </div>
 
-                <Link href="#" className={styles.postTitle}>
-                    <h1>{data.title}</h1>
-                </Link>
 
-                <div className={styles.category}>
+                <h1>{data.title}</h1>
+
+
+                {/* <div className={styles.category}>
                     Category:<h4 className="inline link underline decoration-dotted px-1">{data.catSlug}</h4>
-                </div>
+                </div> */}
 
             </div>
             <div className={styles.imageContainer}>
@@ -48,7 +48,7 @@ const SinglePage = async ({ params }) => {
 
             <div className={styles.contentContainer}>
 
-                
+
 
                 <div className={styles.content}>
                     <div className={styles.post}>
@@ -60,10 +60,10 @@ const SinglePage = async ({ params }) => {
                 </div>
 
             </div>
-            <section className="pt-32 pb-16">
+            {/* <section className="pt-32 pb-16">
                 <h2 className="pb-16">What to read next</h2>
-                {/* <NextReading nextslug={slug} /> */}
-            </section>
+                 <NextReading nextslug={slug} /> 
+            </section>*/}
             <hr />
             <section className="flex">
                 <Join />

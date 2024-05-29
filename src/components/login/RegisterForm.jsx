@@ -48,7 +48,7 @@ export default function RegisterForm() {
             });
 
             const { usersExist } = await resCheckUsers.json();
-            console.log(usersExist, "iaci");
+           
             if (!usersExist) {
                 setAdmin(true); // Set admin to true if no users exist
             }

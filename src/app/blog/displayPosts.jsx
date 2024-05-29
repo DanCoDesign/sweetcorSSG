@@ -2,6 +2,7 @@
 import { useState, useEffect, Children } from "react";
 import styles from "./blogPage.module.css";
 import Card from "../../components/card/Card";
+import PostsSkeleton from "@/components/skeleton/postsSkeleton";
 
 export default function DisplayPosts({ numberOfPosts, withImage, loadmore, featured }) {
     const [currentPage, setCurrentPage] = useState(1);
@@ -42,7 +43,9 @@ export default function DisplayPosts({ numberOfPosts, withImage, loadmore, featu
                 <>
                     {
                         visiblePosts.map((item) => (
-                            <Card item={item} key={item._id} withImage={withImage} featured={featured} />
+                            <div className="flex py-6">
+                                <Card item={item} key={item._id} withImage={withImage} featured={featured} homepage={false} />
+                            </div>
                         ))
                     }
                     {
@@ -60,7 +63,7 @@ export default function DisplayPosts({ numberOfPosts, withImage, loadmore, featu
                 </>
 
             ) : (
-                <h2 className="posts-body-heading">Loading Posts...</h2>
+                <><PostsSkeleton /> <PostsSkeleton /> <PostsSkeleton /></>
             )
             }
         </>

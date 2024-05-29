@@ -2,6 +2,7 @@
 import styles from "./blogPage.module.css";
 import { useEffect, useState } from "react";
 import Card from "@/components/card/Card";
+import FeaturedSkeleton from "@/components/skeleton/FeaturedSkeleton";
 
 export default function BlogFeatured() {
     const [featuredPost, setFeaturedPost] = useState(null);
@@ -27,7 +28,7 @@ export default function BlogFeatured() {
         fetchFeaturedPost();
     }, []);
 
-    if (loading) return <div>Loading...</div>;
+    if (loading) return <FeaturedSkeleton blog={true} />;
     if (error) return <div>Error: {error}</div>;
     if (!featuredPost) return <div>No featured post available</div>;
 
@@ -36,7 +37,7 @@ export default function BlogFeatured() {
             <div className={`${styles.container} dark:bg-[#2E3040]`}>
                 <div className={styles.post}>
 
-                    <Card item={featuredPost} key={featuredPost._id} withImage={true} featured={true} />
+                    <Card item={featuredPost} key={featuredPost._id} withImage={true} featured={true} homepage={false} />
                 </div>
 
             </div>

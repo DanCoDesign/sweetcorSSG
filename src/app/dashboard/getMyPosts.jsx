@@ -55,7 +55,7 @@ export default function GetMyPosts({ user }) {
                     ))}
                 </>
             ) : sortedPosts.length === 0 ? (
-                <h2 className="posts-body-heading">No posts yet</h2>
+                <h2 className="posts-body-heading">You have no posts yet</h2>
             ) : (
                 <h2 className="posts-body-heading">Loading Posts...</h2>
             )}

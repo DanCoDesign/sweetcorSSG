@@ -1,8 +1,8 @@
 .textContainer {
-    padding: 25px 32px;
+    padding: 0 32px;
     flex: 1;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 
 }
 
@@ -15,8 +15,8 @@
 }
 
 .imageContainer {
-    width: 400px;
-    height: 300px;
+    width: 300px;
+    height: 200px;
     position: relative;
 }
 
@@ -72,6 +72,12 @@
 }
 
 
+@media screen and (max-width: 1024px) {
+
+    .imageContainer {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 1280px) {
     .featuredimageContainer {

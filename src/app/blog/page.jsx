@@ -9,7 +9,7 @@ import DisplayPosts from "./displayPosts";
 export default function Posts() {
     return (
 
-        <Container className="flex gap-x-8 flex-col">
+        <Container className="flex gap-x-8 flex-col px-8 md:px-0">
             <BlogFeatured />
             <h1 className={styles.title}> All Posts</h1>
             <hr className="pb-8" />

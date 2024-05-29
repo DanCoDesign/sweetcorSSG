@@ -12,7 +12,7 @@ const AboutSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20 px-10 py-12 lg:px-20 lg:py-24 ">
                 <div className="flex flex-col space-y-4">
                     <span className="uppercase mb-6">About Us</span>
-                    <h3 className="font-bold sm:text-[28px] lg:text-[32px] xl:text-[36px] tracking-tighter leading-tight">
+                    <h3 className="font-bold text-[28px] lg:text-[32px] xl:text-[36px] tracking-tighter leading-tight">
                         We are a community of content writers who share their learnings
                     </h3>
                     <p className="max-w-5/12 text-base">
