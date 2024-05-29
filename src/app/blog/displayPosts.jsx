@@ -44,8 +44,8 @@ export default function DisplayPosts({ numberOfPosts, withImage, loadmore, featu
                 <>
                     {
                         visiblePosts.map((item) => (
-                            <div className="flex py-6">
-                                <Card item={item} key={item._id} withImage={withImage} featured={featured} homepage={false} />
+                            <div className="flex py-6" key={item._id}>
+                                <Card item={item} withImage={withImage} featured={featured} homepage={false} />
                             </div>
                         ))
                     }

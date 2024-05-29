@@ -26,7 +26,7 @@ export default function GetMyPosts({ user }) {
         };
 
         fetchData();
-    }, [user]);
+    }, [userToFetch]);
 
     const handleEditPost = (postId) => {
         const post = posts.find((item) => item._id === postId);
