@@ -6,6 +6,17 @@
   margin-right: auto;
 }
 
+.editor{
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 5px;
+  margin: 24px 0;
+}
+.form-group:has(.submit_btn) {
+ display: flex ;
+ justify-content: flex-end;
+
+}
 .label {
   display: block;
   margin-bottom: 8px;
@@ -20,6 +31,14 @@
   border-radius: 4px;
 
   transition: border-color 0.3s;
+}
+.imageInput{
+  width: auto;
+  width: 50%;
+  padding: 10px;
+  border: 1px solid var(--main-color);
+  border-radius: 4px;
+
 }
 
 .input:focus,

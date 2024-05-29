@@ -11,7 +11,7 @@ export const GET = async (req, { params }) => {
   }
   
   try {
-    console.log(slug);
+    
     await clientPromise();
     const post = await Post.findOne({
       _id: new ObjectId(slug),

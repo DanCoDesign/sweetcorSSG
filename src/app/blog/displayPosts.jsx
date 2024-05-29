@@ -16,7 +16,8 @@ export default function DisplayPosts({ numberOfPosts, withImage, loadmore, featu
                     throw new Error('Failed to fetch posts');
                 }
                 const data = await response.json();
-                setPosts(data.posts);
+                const approvedPosts = data.posts.filter(post => post.approved === true);
+                setPosts(approvedPosts);
             } catch (error) {
                 console.error('Error fetching posts:', error);
             }

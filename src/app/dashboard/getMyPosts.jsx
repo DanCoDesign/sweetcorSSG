@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Card from "../../components/card/Card";
 import EditPost from "./editing";
 
@@ -8,6 +8,8 @@ export default function GetMyPosts({ user }) {
     const [posts, setPosts] = useState([]);
     const [showWritePost, setShowWritePost] = useState(false);
     const [postToEdit, setPostToEdit] = useState(null);
+    const editingRef = useRef(null);
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -31,6 +33,11 @@ export default function GetMyPosts({ user }) {
         if (post) {
             setPostToEdit(post);
             setShowWritePost(true);
+            setTimeout(() => {
+                if (editingRef.current) {
+                    editingRef.current.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
         }
     };
 
@@ -55,11 +62,16 @@ export default function GetMyPosts({ user }) {
                     ))}
                 </>
             ) : sortedPosts.length === 0 ? (
-                <h2 className="posts-body-heading">You have no posts yet</h2>
+                <h2 className="my-10">You have no posts yet</h2>
             ) : (
-                <h2 className="posts-body-heading">Loading Posts...</h2>
+                <h2 className="my-10">Loading Posts...</h2>
             )}
-            {showWritePost && <EditPost post={postToEdit} />}
+            <hr />
+            {showWritePost && (
+                <div id="editing" className="my-8" ref={editingRef}>
+                    <EditPost post={postToEdit} />
+                </div>
+            )}
         </>
     );
 };

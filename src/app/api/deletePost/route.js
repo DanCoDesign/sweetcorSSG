@@ -4,16 +4,16 @@ import Post from "@/models/post";
 import { NextResponse } from "next/server";
 
 export async function DELETE(req, res) {
-    console.log(req.id);
+   
 
     if (req.method !== 'DELETE') {
         return res.status(405).json({ error: 'Method Not Allowed' });
     }
     try {
         const { id } = req.body;
-        console.log(id);
+        
         const result = await clientPromise();
-        console.log(result);
+       
         if (result) {
             return NextResponse.json({ success: true }, { status: 200 });
         }

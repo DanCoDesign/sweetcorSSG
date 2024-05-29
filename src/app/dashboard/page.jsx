@@ -7,6 +7,7 @@ import UserInfo from "@/components/login/UserInfo";
 import WritePost from "./writing";
 import GetMyPosts from "./getMyPosts";
 import GetAdminRights from "./GetAdminRights";
+import Link from "next/link";
 
 const Dashboard = () => {
     const { data: session } = useSession();
@@ -17,6 +18,20 @@ const Dashboard = () => {
         setButtonText((prevText) => (prevText === "New Post" ? "Cancel Writing" : "New Post"));
     };
 
+    if (!session) {
+        return (
+            <Container className="flex flex-col items-center justify-center min-h-[calc(100vh-300px)] py-16 px-8 " >
+                <h1 className="text-2xl font-bold py-2">You are not logged in</h1>
+                <p>Please log in to access your dashboard.</p>
+                <Link href="/login"
+                    className="px-12 py-3 font-bold text-center text-main-color bg-button-bg w-auto rounded-md mt-8">
+                    <div className="flex justify-between items-center text-base">
+                        Go to Login
+                    </div>
+                </Link>
+            </Container>
+        );
+    }
     return (
         <Container className="flex flex-col relative px-8 min-h-screen gap-8">
 

@@ -62,50 +62,55 @@ const EditPost = ({ post }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className={styles.editor}>
+        <>
+            <h2> Edit Away, Then Smash That Submit Button!</h2>
 
-            <div className={styles['form-group']}>
-                <label className={styles.label}>Title</label>
-                <input className={styles.input}
-                    type="text"
-                    placeholder="Title of the post"
-                    onChange={(e) => setTitle(e.target.value)}
-                    value={title || ''}
-                />
-            </div>
-            <div className={styles['form-group']}>
-                <label className={styles.label}>Content</label>
-                <textarea className={styles.textarea}
-                    name="content"
-                    placeholder="Content of the post"
-                    value={content || ''}
-                    onChange={(e) => setContent(e.target.value)}
-                    cols={20}
-                    rows={8}
-                />
-            </div>
-            <div className={styles['form-group']}>
-                <div className="flex w-full items-center space-x-2">
-                    <label className={styles.label}>Image: </label>
+
+            <form onSubmit={handleSubmit} className={styles.editor}>
+
+                <div className={styles['form-group']}>
+                    <label className={styles.label}>Title</label>
                     <input className={styles.input}
                         type="text"
-                        placeholder="Link to the image you want to display"
-                        onChange={(e) => setImage(e.target.value)}
-                        value={image || ''}
+                        placeholder="Title of the post"
+                        onChange={(e) => setTitle(e.target.value)}
+                        value={title || ''}
                     />
-                    <div className={styles.randombtn} onClick={handleRandomImage}>Random Image</div>
                 </div>
+                <div className={styles['form-group']}>
+                    <label className={styles.label}>Content</label>
+                    <textarea className={styles.textarea}
+                        name="content"
+                        placeholder="Content of the post"
+                        value={content || ''}
+                        onChange={(e) => setContent(e.target.value)}
+                        cols={20}
+                        rows={8}
+                    />
+                </div>
+                <div className={styles['form-group']}>
+                    <div className="flex w-full items-center space-x-2">
+                        <label className={styles.label}>Image: </label>
+                        <input className={styles.imageInput}
+                            type="text"
+                            placeholder="Link to the image you want to display"
+                            onChange={(e) => setImage(e.target.value)}
+                            value={image || ''}
+                        />
+                        <div className={styles.randombtn} onClick={handleRandomImage}>Random Image</div>
+                    </div>
 
-            </div>
-            <input className={styles.hidden} value={author} readOnly />
-            <div className={styles['form-group']}>
-                <button type="submit" className={styles.submit_btn}>
-                    Edit Post
-                </button>
-                {message}
-                {error}
-            </div>
-        </form>
+                </div>
+                <input className={styles.hidden} value={author} readOnly />
+                <div className={styles['form-group']}>
+                    <button type="submit" className={styles.submit_btn}>
+                        Submit
+                    </button>
+                    {message}
+                    {error}
+                </div>
+            </form>
+        </>
     )
 }
 

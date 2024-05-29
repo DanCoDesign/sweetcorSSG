@@ -20,6 +20,10 @@ const PostSchema = new Schema(
       type: 'boolean',
       default: false,
     },
+    approved: {
+      type: 'boolean',
+      default: false,
+    },
   },
   // tags: { type: [String] },
   { timestamps: true }

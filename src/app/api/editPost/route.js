@@ -6,7 +6,7 @@ export async function POST(req) {
   try {
 
     const { id, title, content, image, author } = await req.json();
-    console.log(id);
+    
     await clientPromise();
     const filter = { _id: id }
     await Post.findOneAndUpdate(
