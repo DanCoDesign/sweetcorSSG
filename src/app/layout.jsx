@@ -1,9 +1,9 @@
 import '../globals.css'
 import { Sen } from 'next/font/google'
 
-import Navbar from "../../components/navbar/navbar";
-import Footer from "../../components/footer/footer";
-import { AuthProvider } from '../providers/Providers';
+import Navbar from "../components/navbar/navbar";
+import Footer from "../components/footer/footer";
+import { AuthProvider } from './providers/Providers';
 
 const inter = Sen({ subsets: ['latin'] })
 

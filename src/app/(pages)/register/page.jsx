@@ -1,7 +1,7 @@
 import RegisterForm from "@/components/login/RegisterForm";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import { authOptions } from "../../api/auth/[...nextauth]/route";
 import styles from "../login/loginPage.module.css";
 
 export default async function Register() {
