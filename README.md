@@ -12,9 +12,11 @@
 The application has the potential for significant enhancements, including support for rich text, multiple images, and integration with a CMS. 
 Currently the blog content text is just for presentation purposes and uses <em>dangerouslySetInnerHTML</em> which is not recommended (can lead to security vulnerabilities such as Cross-Site Scripting (XSS)).
 </p>
+
 👉 Live Demo: <a href='https://sweetcor-ssg.vercel.app/'>SweetCor Demo</a>
 
-<h3>Features</h3>(#Features)
+<h3>Features</h3>
+
 <ul style="font-size: 16px;">
   <li><strong>User Registration</strong>: Allows users to create an account.</li>
   <li><strong>Create Blog Posts</strong>: Users can write and submit blog posts.</li>
@@ -23,6 +25,7 @@ Currently the blog content text is just for presentation purposes and uses <em>d
 </ul>
 
 <h3>API Endpoints</h3>
+
 <p>The Blog Application uses the following API endpoints to manage all actions:</p>
 
 <ul>
