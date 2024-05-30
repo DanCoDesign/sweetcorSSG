@@ -14,7 +14,7 @@ Currently the blog content text is just for presentation purposes and uses <em>d
 </p>
 👉 Live Demo: <a href='https://sweetcor-ssg.vercel.app/'>SweetCor Demo</a>
 
-<h3>Features</h3>
+<h3>Features</h3>(#Features)
 <ul style="font-size: 16px;">
   <li><strong>User Registration</strong>: Allows users to create an account.</li>
   <li><strong>Create Blog Posts</strong>: Users can write and submit blog posts.</li>
