@@ -1,4 +1,4 @@
-import '../globals.css'
+import './globals.css'
 import { Sen } from 'next/font/google'
 
 import Navbar from "../components/navbar/navbar";
