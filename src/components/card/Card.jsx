@@ -24,7 +24,7 @@ const Card = ({ item, withImage, featured, homepage }) => {
                         <Link href={`/posts/${item._id}`}>
                             <h2>{item.title}</h2>
                         </Link>
-                        <p className="line-clamp-3">{item.content}</p>
+                        <p className="line-clamp-3" dangerouslySetInnerHTML={{ __html: item?.content.slice(0, 400) }}></p>
                         <div className="flex my-8">
                             <BookAMeeting title="Read More >" link={`/posts/${item._id}`} />
                         </div>
@@ -56,7 +56,7 @@ const Card = ({ item, withImage, featured, homepage }) => {
 
                         <h2>{item.title}</h2>
 
-                        <p className="line-clamp-2">{item.content}</p>
+                        <p className="line-clamp-2" dangerouslySetInnerHTML={{ __html: item?.content.slice(0, 200) }}></p>
                         {featured && <div className="flex my-8"><BookAMeeting title="Read More >" link={`/posts/${item._id}`} /></div>}
                     </div>
                 </Link>

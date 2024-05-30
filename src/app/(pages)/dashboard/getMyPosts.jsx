@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect, useRef } from "react";
-import Card from "../../components/card/Card";
+import Card from "../../../components/card/Card";
 import EditPost from "./editing";
 
 export default function GetMyPosts({ user }) {
@@ -19,7 +19,9 @@ export default function GetMyPosts({ user }) {
                     throw new Error('Failed to fetch posts');
                 }
                 const data = await response.json();
-                setPosts(data.posts);
+               
+                const approvedPosts = data.posts.filter(post => post.approved === true);
+                setPosts(approvedPosts);
             } catch (error) {
                 console.error('Error fetching posts:', error);
             }

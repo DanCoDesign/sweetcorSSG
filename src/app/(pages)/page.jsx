@@ -1,8 +1,8 @@
 
-import Hero from "../components/hero/hero";
-import Featured from "../components/featured/Featured";
-import AllPosts from "../components/allPosts/AllPosts";
-import Container from "../components/Container";
+import Hero from "../../components/hero/hero";
+import Featured from "../../components/featured/Featured";
+import AllPosts from "../../components/allPosts/AllPosts";
+import Container from "../../components/Container";
 import AboutSection from "@/components/aboutUs/AboutUs";
 import CategoryList from "@/components/categoryList/CategoryList";
 import Why from "@/components/whysegment/why";

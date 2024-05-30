@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect, Children } from "react";
 import styles from "./blogPage.module.css";
-import Card from "../../components/card/Card";
+import Card from "../../../components/card/Card";
 import PostsSkeleton from "@/components/skeleton/PostsSkeleton";
 
 export default function DisplayPosts({ numberOfPosts, withImage, loadmore, featured }) {

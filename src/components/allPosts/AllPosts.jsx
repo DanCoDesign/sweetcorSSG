@@ -2,7 +2,7 @@
 import styles from "./allposts.module.css";
 import Link from "next/link";
 
-import DisplayPosts from "@/app/blog/displayPosts";
+import DisplayPosts from "@/app/(pages)/blog/displayPosts";
 
 const AllPosts = () => {
     return (
@@ -13,7 +13,7 @@ const AllPosts = () => {
                 </h1>
                 <Link href={`/blog`} className="link"><span >View All</span></Link>
             </div>
-           
+
             <DisplayPosts numberOfPosts={3} withImage={false} loadmore={false} />
         </section>
 

@@ -26,7 +26,7 @@ const SinglePage = async ({ params }) => {
 
 
     return (
-        <main className={["dark:hover:bg-[#2E3040]", styles.container].join(" ")}>
+        <main className={[styles.container].join(" ")}>
             <div className={styles.infoContainer}>
                 <div className={styles.date}>
                     Posted on {new Date(data.createdAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
@@ -42,7 +42,7 @@ const SinglePage = async ({ params }) => {
 
             </div>
             <div className={styles.imageContainer}>
-                <Image src={data.img} alt="" layout="fill" className={styles.image} />
+                <Image src={data.img} alt="main image" layout="fill" className={styles.image} />
             </div>
 
 
