@@ -15,7 +15,7 @@ Currently the blog content text is just for presentation purposes and uses <em>d
 
 👉 Live Demo: <a href='https://sweetcor-ssg.vercel.app/'>SweetCor Demo</a>
 
-<h3>Features</h3>
+<h2>Features</h2>
 
 <ul style="font-size: 16px;">
   <li><strong>User Registration</strong>: Allows users to create an account.</li>
@@ -24,7 +24,7 @@ Currently the blog content text is just for presentation purposes and uses <em>d
   <li><strong>Featured Post</strong>: Admin can highlight a featured post on the blog homepage.</li>
 </ul>
 
-<h3>API Endpoints</h3>
+<h2>API Endpoints</h2>
 
 <p>The Blog Application uses the following API endpoints to manage all actions:</p>
 
@@ -44,7 +44,7 @@ Currently the blog content text is just for presentation purposes and uses <em>d
 </ul>
 
 
-<h3>Future Enhancements</h3>
+<h2>Future Enhancements</h2>
 <p style="font-size: 16px;">The Blog Application can be greatly improved by integrating the following features:</p>
 <ul style="font-size: 16px;">
   <li><strong>Rich Text Editor</strong>: Replace the simple text editor with a rich text editor to support formatting, links, and multimedia.</li>
@@ -57,30 +57,14 @@ Currently the blog content text is just for presentation purposes and uses <em>d
 <p>Styling is done combining both <b>TailwindCSS</b> and <b>CSS Modules</b>. CSS Modules use local scope to avoid style conflicts across different project parts, allowing component-scoped styling.
 </p>
 
+<h2>Get it Now</h2>
+
+<p>
+This Next.js Template is free for now. It is extremely fast, provides an excellent starting point for any blog and it's easily extendable. Future enhancements and personalization can further improve its functionality and user experience.
+</p>
 
 <br>
 
-<h2>Screenshots 📸</h2>
-<br>
-<h3 align='center'>Home Page 🏡</h3>
+<h2>Need Help? Hire me</h2>
 
-<div align='center'>
-<img src='https://github.com/DaneConstantin/sweetcorSSG/assets/145013631/6e26b736-e2b1-41a7-a046-8d2186b24a13' />
-</div>
-
-<br><br>
-
-<h3 align='center'>Blog Page</h3>
-
-<div align='center'>
-<img src='https://github.com/DaneConstantin/sweetcorSSG/assets/145013631/ab4de999-e23a-4bbb-ac11-ce75b526208a' />
-</div>
-
-<br><br>
-
-<h3 align='center'>Dashboard Page</h3>
-
-<div align='center'>
-<img src='https://github.com/DaneConstantin/sweetcorSSG/assets/145013631/3a1aa56f-5a4c-4bfe-9287-ae8e41b944f3' />
-
-</div>
+<p style="font-size: 16px;">If you are not a developer or need a helping hand, you can hire me and I will install, setup, customize and publish this template for you.</p>
